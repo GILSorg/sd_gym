@@ -1,23 +1,19 @@
 # SDGym: A Reinforcement Learning Gym using System Dynamics models
 
-This repository contains the code for the paper "[SDGym: Low-Code Reinforcement Learning Environments using System Dynamics Models](https://arxiv.org/abs/2310.12494)" which will be presented at ISDC 2024.
 
-Citation TBA.
+SDGym is a tool for turning SD models into rich Reinforncement Learning enviroments in order to explore complex models of societal probelms and discover optimal solution strategies.
+
+**Note** This repository is a fork of the Google Research [SDGym](https://github.com/GILSorg/sd_gym). The original repo is code for the paper "[SDGym: Low-Code Reinforcement Learning Environments using System Dynamics Models](https://arxiv.org/abs/2310.12494)" which was presented at ISDC 2024. 
+
+
+
 
 ## Installation
-Install via pip from github:
+IN PROGRESS
 
-```bash
- pip install git+https://github.com/google-research/google-research.git#subdirectory=sd_gym
-```
 
- Alternatively, clone the repository and install the module from there.
-
-```bash
-git clone https://github.com/google-research/google-research.git
-cd google-research/sd_gym/
-pip install .
-```
+## Usage
+ IN PROGRESS
 
 
 ## License
