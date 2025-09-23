@@ -36,14 +36,14 @@ import setuptools
 
 setuptools.setup(
     name="sd_gym",
-    version="0.1.0",
+    version="0.2.0",
     description=("SDGym: A Reinforcement Learning Gym using with System "
                  "Dynamics models."),
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     license="Apache 2.0",
     author="Google Research",
-    url="http://github.com/google-research/google-research/sd_gym",
+    url="https://github.com/GILSorg/sd_gym",
     package_dir={"sd_gym": "."},
     packages=["sd_gym"],
     install_requires=pathlib.Path("requirements.txt").read_text().splitlines(),

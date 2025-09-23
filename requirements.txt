@@ -1,9 +1,9 @@
 absl-py
 attrs
-BPTK-Py==1.8.0
+BPTK-Py
 gym
 netCDF4
-numpy==1.24.2
+numpy
 pandas
-pysd==3.9.0
+pysd
 scipy
