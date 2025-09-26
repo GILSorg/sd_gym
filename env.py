@@ -20,7 +20,6 @@ import json
 from typing import Any, Dict, List, Optional, Tuple
 
 import gymnasium as gym
-from gym.utils import seeding
 import numpy as np
 import pandas as pd
 
@@ -347,7 +346,7 @@ class SDEnv(gym.Env):
   # DEPRECATED: use `env.reset(seed=...)` instead.
   def seed(self, seed = None):  # pytype: disable=signature-mismatch  # overriding-return-type-checks
     """Sets the seed for this env's random number generator."""
-    rng, seed = seeding.np_random(seed)
+    rng, seed = self.np_random(seed)
     self.state.rng = rng
     return [seed]
 
