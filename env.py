@@ -19,7 +19,7 @@ import copy
 import json
 from typing import Any, Dict, List, Optional, Tuple
 
-import gym
+import gymnasium as gym
 from gym.utils import seeding
 import numpy as np
 import pandas as pd
@@ -344,6 +344,7 @@ class SDEnv(gym.Env):
     self.history = []
     return self._get_observable_state()
 
+  # DEPRECATED: use `env.reset(seed=...)` instead.
   def seed(self, seed = None):  # pytype: disable=signature-mismatch  # overriding-return-type-checks
     """Sets the seed for this env's random number generator."""
     rng, seed = seeding.np_random(seed)

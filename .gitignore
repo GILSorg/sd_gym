@@ -1,0 +1,15 @@
+# created by virtualenv automatically
+/bin
+/build
+/etc
+/include
+/lib
+/lib
+/lib
+__pycache__/rl_lib.cpython-311.pyc
+/lib
+/share
+/sd_gym.egg-info
+/__pycache__
+CACHEDIR.TAG
+/__pycache__

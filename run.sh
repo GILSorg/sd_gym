@@ -22,3 +22,4 @@ source ./bin/activate
 
 pip install .
 python example_main.py
+python rl_test.py

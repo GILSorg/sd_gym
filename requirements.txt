@@ -1,9 +1,14 @@
 absl-py
 attrs
 BPTK-Py
-gym
+gymnasium
 netCDF4
 numpy
 pandas
 pysd
 scipy
+stable-baselines3[extra]
+tensorboard
+torch
+torchvision
+tqdm
