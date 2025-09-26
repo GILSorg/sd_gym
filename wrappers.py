@@ -15,7 +15,7 @@
 
 """Wrappers for creating gym environments."""
 
-import gym
+import gymnasium as gym
 import numpy as np
 
 from sd_gym import core

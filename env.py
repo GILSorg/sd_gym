@@ -323,25 +323,32 @@ class SDEnv(gym.Env):
         obs_state[var_name] = obs_var_series
     return obs_state
 
-  def reset(self):
-    """Resets the simulation.
-
-    Reloads SD model file, resets time to initial time and configures
-    some of the parameters in the internal params file if they
-    were not assigned.
-
+  def reset(self, seed=None, options=None):
+    """Reset the environment.
+    
+    Args:
+        seed: The seed that is used to initialize the environment's PRNG (optional)
+        options: Additional information to specify how the environment is reset (optional)
+    
     Returns:
-      observation: The observable features for the first interaction.
+        tuple: A tuple containing:
+            - observation: The initial observation
+            - info: A dictionary containing auxiliary information
     """
+    if seed is not None:
+        super().reset(seed=seed)
+            
     self.is_reset = True
     sd_sim = self.params.simulator(self.params)
     self.state = core.State(sd_sim,
                             sd_sim.get_start_time(),
                             sd_sim.get_initial_conditions())
     if self.params.reward_function:
-      self.reward_fn = self.params.reward_function.reset(self._get_all_state())
+        self.reward_fn = self.params.reward_function.reset(self._get_all_state())
     self.history = []
-    return self._get_observable_state()
+    
+    # Return both observation and info dictionary
+    return self._get_observable_state(), {}
 
   # DEPRECATED: use `env.reset(seed=...)` instead.
   def seed(self, seed = None):  # pytype: disable=signature-mismatch  # overriding-return-type-checks
