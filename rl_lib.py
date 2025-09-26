@@ -1,7 +1,8 @@
-from stable_baselines3 import PPO2
+from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
 from sd_gym import core, env as env_lib
 import numpy as np
+from stable_baselines3.common.logger import configure
 
 class CustomSDEnv(env_lib.SDEnv):
     def step(self, action):
@@ -15,8 +16,10 @@ def initialize_environment(sd_model_filename):
     pysd_sd_env = CustomSDEnv(pysd_params)
     return DummyVecEnv([lambda: pysd_sd_env])
 
-# Train an RL agent using PPO2
+# Train an RL agent using PPO2 and log the output to TensorBoard
 def train_agent(env, total_timesteps=10000):
-    model = PPO2('MlpPolicy', env, verbose=1)
+    model = PPO('MlpPolicy', env, verbose=1)
+    logger = configure("logs/", ["stdout", "tensorboard"])
+    model.set_logger(logger)
     model.learn(total_timesteps=total_timesteps)
 
