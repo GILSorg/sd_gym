@@ -14,3 +14,5 @@ __pycache__/rl_lib.cpython-311.pyc
 CACHEDIR.TAG
 /__pycache__
 /logs
+/best_model
+/eval_logs

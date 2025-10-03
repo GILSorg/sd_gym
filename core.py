@@ -77,7 +77,7 @@ class Params(object):
   reward_function = attr.ib(default=None)  # type: Optional[RewardFn]
 
   # Which package to use to run the SD simulation
-  simulator = attr.ib(default='BPTK_Py')  # type: Union[str, SDSimulator]
+  simulator = attr.ib(default='PySD')  # type: Union[str, SDSimulator]
 
 
 # Values with associated with this key within dictionaries are given

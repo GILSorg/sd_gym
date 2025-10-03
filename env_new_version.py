@@ -23,7 +23,7 @@ import gymnasium as gym
 import numpy as np
 import pandas as pd
 
-# from sd_gym import bptk_simulator
+from sd_gym import bptk_simulator
 from sd_gym import core
 from sd_gym import pysd_simulator
 
@@ -36,7 +36,7 @@ class SDEnv(gym.Env):
   """
 
   backends = {
-      # 'BPTK_Py': bptk_simulator.BPTKSDSimulator,
+      'BPTK_Py': bptk_simulator.BPTKSDSimulator,
       'PySD': pysd_simulator.PySDSimulator,
   }
 

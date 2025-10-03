@@ -43,7 +43,7 @@ def main(argv):
 
   with open(sd_model_filename, 'w') as f:
     f.write(data)
-
+  """
   bptk_params = core.Params(sd_model_filename,
                             env_dt=1.0,
                             sd_dt=.1,
@@ -55,7 +55,7 @@ def main(argv):
   print('Action space: ', bptk_sd_env.action_space)
   print('Observation space: ', bptk_sd_env.observation_space)
   print('Initial conditions: ', bptk_obs)
-
+  """
   pysd_params = core.Params(sd_model_filename,
                             env_dt=1.0,
                             sd_dt=.1,
