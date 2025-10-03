@@ -36,7 +36,7 @@ import setuptools
 
 setuptools.setup(
     name="sd_gym",
-    version="0.3.0",
+    version="0.4.0",
     description=("SDGym: A Reinforcement Learning Gym using with System "
                  "Dynamics models."),
     long_description=open("README.md").read(),
